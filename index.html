@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IHM Shri Shakti Hospitality Champions: interactive Round 1 general knowledge quiz for B.Sc. first-year and CCFPP students.">
+  <title>Hospitality Champions | Round 1: Brain Blitz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="logo.png" alt="IHM Shri Shakti logo" class="logo">
+      <div>
+        <p class="eyebrow">IHM SHRI SHAKTI</p>
+        <h1>Hospitality Champions</h1>
+        <p class="subtitle">Round 1 · Brain Blitz — General Knowledge</p>
+      </div>
+    </div>
+    <div class="header-tag">B.Sc. 1st Year &amp; CCFPP</div>
+  </header>
+
+  <main class="container">
+    <section id="welcome" class="panel welcome-panel">
+      <div class="welcome-art" aria-hidden="true">
+        <span>🧠</span><span>🏛️</span><span>🎭</span><span>🧩</span>
+      </div>
+      <p class="eyebrow">KNOW · THINK · EXPLORE · CHALLENGE</p>
+      <h2>Ready for Brain Blitz?</h2>
+      <p class="intro">15 visual questions. Moderate-to-mid-level thinking. No countries or capitals in this round.</p>
+      <div class="form-grid">
+        <label for="teamName">Team name
+          <input id="teamName" type="text" maxlength="40" placeholder="Enter your team name" autocomplete="off">
+        </label>
+        <label for="participant1">Participant 1
+          <input id="participant1" type="text" maxlength="50" placeholder="Full name" autocomplete="off">
+        </label>
+        <label for="participant2">Participant 2
+          <input id="participant2" type="text" maxlength="50" placeholder="Full name" autocomplete="off">
+        </label>
+      </div>
+      <ul class="rules">
+        <li>One question appears at a time.</li>
+        <li>Discuss briefly and select one answer.</li>
+        <li>Each correct answer earns 10 points; there is no negative marking.</li>
+        <li>Submit an answer to see feedback, then continue.</li>
+      </ul>
+      <button id="startBtn" class="btn btn-primary">Start the challenge <span aria-hidden="true">→</span></button>
+    </section>
+
+    <section id="quiz" class="panel quiz-panel hidden" aria-live="polite">
+      <div class="quiz-topline">
+        <div>
+          <p id="teamDisplay" class="eyebrow"></p>
+          <h2 id="questionCounter">Question 1 of 15</h2>
+        </div>
+        <div class="score-pill"><span id="scoreDisplay">0</span><small>POINTS</small></div>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="15" aria-valuenow="1">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+      <div class="question-layout">
+        <div class="visual-card">
+          <div id="visual" class="visual" aria-hidden="true">🏛️</div>
+          <p id="visualCaption" class="visual-caption">Look closely at the visual clue</p>
+        </div>
+        <div class="question-content">
+          <p id="category" class="category-label">HERITAGE & CULTURE</p>
+          <h3 id="questionText">Question goes here</h3>
+          <div id="options" class="options" role="group" aria-label="Answer choices"></div>
+          <p id="feedback" class="feedback hidden" role="status"></p>
+          <div class="actions">
+            <button id="submitBtn" class="btn btn-primary" disabled>Submit answer</button>
+            <button id="nextBtn" class="btn btn-secondary hidden">Next question →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="panel results-panel hidden">
+      <div class="result-icon" aria-hidden="true">🏆</div>
+      <p class="eyebrow">ROUND COMPLETE</p>
+      <h2 id="resultHeading">Well played!</h2>
+      <p id="resultTeam" class="result-team"></p>
+      <div class="result-score"><span id="finalScore">0</span><small>/ 150 points</small></div>
+      <p id="resultMessage"></p>
+      <div class="result-actions">
+        <button id="reviewBtn" class="btn btn-secondary">Review answers</button>
+        <button id="restartBtn" class="btn btn-primary">Play again</button>
+      </div>
+      <div id="review" class="review-list hidden"></div>
+      <p class="credit">Training module activity · Prepared by Dr. Kiran Mayi Audina</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>IHM Shri Shakti</span><span>Hospitality Champions Challenge</span><span>Prepared by Dr. Kiran Mayi Audina</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
